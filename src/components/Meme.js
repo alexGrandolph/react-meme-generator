@@ -2,7 +2,13 @@
 
 function Meme() {
   return (
-    <h1>test</h1>
+    <main>
+      <form className="form">
+        <input type="text" className="form-input" placeholder="Top Text" />
+        <input type="text" className="form-form-input" placeholder="Bottom Text" />
+        <button className="form-button">Get a New Image</button>
+      </form>
+    </main>
   )
 }
 export default Meme
