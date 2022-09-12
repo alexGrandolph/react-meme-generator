@@ -12,7 +12,7 @@ function Meme() {
 
   const [formData, setFormData] = React.useState({
     topText: "",
-    bottonText: ""
+    bottomText: ""
   })
   console.log(formData)
   function getMemeImage() {
@@ -47,6 +47,9 @@ function Meme() {
           type="text"
           placeholder="Bottom text"
           className="form--input"
+          name="bottomText"
+          onChange={handleChange}
+          value={formData.bottomText}
         />
         <button
           className="form--button"
