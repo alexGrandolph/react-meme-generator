@@ -89,9 +89,6 @@ main {
 .meme--image {
   max-width: 100%;
   border-radius: 3px;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 .meme--text {

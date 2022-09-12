@@ -10,6 +10,11 @@ function Meme() {
   
   const [allMemeImages, setAllMemeImages] = React.useState(memesData.data.memes)
 
+  const [formData, setFormData] = React.useState({
+    topText: "",
+    bottonText: ""
+  })
+  console.log(formData)
   function getMemeImage() {
     const randomNumber = Math.floor(Math.random() * allMemeImages.length)
     const url = allMemeImages[randomNumber].url
@@ -19,13 +24,24 @@ function Meme() {
     }))
   }
 
+  function handleChange(event) {
+    const {name, value, type} = event.target
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      [name]: value
+    }))
+  }
+
   return (
     <main>
       <div className="form">
         <input
-          type="text"
+          type="topText"
           placeholder="Top text"
           className="form--input"
+          name="topText"
+          onChange={handleChange}
+          value={formData.topText}
         />
         <input
           type="text"
