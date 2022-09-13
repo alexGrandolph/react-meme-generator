@@ -1,4 +1,4 @@
-import memesData from '../data/memeData.json'
+// import memesData from '../data/memeData.json'
 import React from 'react'
 
 function Meme() {
@@ -8,9 +8,9 @@ function Meme() {
     fetch(`https://api.imgflip.com/get_memes`)
     .then(response => response.json())
     .then(data => setAllMemes(data.data.memes))
+    console.log('effect ran')
   }, [])
 
-  console.log(allMemes[3])
 
   const [meme, setMeme] = React.useState({
     topText: "",
